@@ -27,10 +27,7 @@ This project is suitable for both small startups and scalable production environ
 
 - Python 3.10+
 - Django 4+
-- PostgreSQL (recommended)
 - Django REST Framework (optional)
-- Redis (cache / background tasks)
-- Docker (optional)
 
 ---
 
@@ -62,9 +59,9 @@ pip install -r requirements.txt
 Create a `.env` file in the project root:
 
 ```env
-DEBUG=True
 SECRET_KEY=your-secret-key
-DATABASE_URL=postgres://user:password@localhost:5432/marketpy
+DEBUG=True
+ALLOWED_HOSTS="localhost,128.0.0.1"
 ```
 
 ### 5️⃣ Apply migrations
@@ -92,8 +89,8 @@ python manage.py runserver
 ```text
 MarketPy/
 │
-├── config/             # Project settings and URLs
-├── apps/               # Custom Django apps
+├── config/
+├── apps/
 │   ├── accounts/
 │   ├── products/
 │   ├── orders/
@@ -116,20 +113,6 @@ MarketPy/
 
 ---
 
-## 🧪 Testing
-
-```bash
-python manage.py test
-```
-
----
-
-## 📦 Deployment (Quick Notes)
-
-- Use Gunicorn + Nginx
-- Configure `STATIC_ROOT` and `MEDIA_ROOT`
-- Use PostgreSQL in production
-- Enable caching (Redis recommended)
 
 ---
 
@@ -187,7 +170,7 @@ MarketPy یک فروشگاه اینترنتی مبتنی بر **Django** است 
 ### 1️⃣ دریافت سورس پروژه
 
 ```bash
-git clone https://github.com/yourusername/MarketPy.git
+git clone https://github.com/aboalfazlH/MarketPy.git
 cd MarketPy
 ```
 
@@ -212,7 +195,6 @@ pip install -r requirements.txt
 ```env
 DEBUG=True
 SECRET_KEY=your-secret-key
-DATABASE_URL=postgres://user:password@localhost:5432/marketpy
 ```
 
 ### 5️⃣ اجرای مایگریشن‌ها
@@ -240,8 +222,8 @@ python manage.py runserver
 ```text
 MarketPy/
 │
-├── config/             # تنظیمات و مسیرها
-├── apps/               # اپلیکیشن‌های پروژه
+├── config/
+├── apps/
 │   ├── accounts/
 │   ├── products/
 │   ├── orders/
@@ -261,23 +243,6 @@ MarketPy/
 - اطلاعات حساس در فایل `.env` نگهداری شوند
 - در محیط production مقدار `DEBUG=False` باشد
 - استفاده از HTTPS الزامی است
-
----
-
-## 🧪 تست‌ها
-
-```bash
-python manage.py test
-```
-
----
-
-## 📦 استقرار (خلاصه)
-
-- استفاده از Gunicorn و Nginx
-- تنظیم صحیح STATIC و MEDIA
-- استفاده از PostgreSQL
-- فعال‌سازی کش (ترجیحاً Redis)
 
 ---
 
