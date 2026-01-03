@@ -1,5 +1,5 @@
 # 🛒 MarketPy
-
+> فعلا توسعه این ریپازیتوری متوقف شده،بعد از اتمام رساندن ریپازیتوری های دیگر توسعه ادامه می یابد:)
 MarketPy is an e-commerce platform built with **Django**, designed with a strong focus on:
 
 - Clean architecture
